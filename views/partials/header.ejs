@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+</head>
+<body>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">Session Authentication</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
+                        <ul class="navbar-nav">
+                                <%if(!auth){%>
+                                    <li class="nav-item active">
+                                            <a class="nav-link" href="/">Home</a>
+                                          </li>
+                                    <li class="nav-item active">
+                                            <a class="nav-link" href="/register">Register</a>
+                                          </li>
+                                <li class="nav-item active">
+                                  <a class="nav-link" href="/login">Login</a>
+                                </li>
+                              <%} else{%>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/profile"><%=auth%></a>
+                                  </li>
+                        <li class="nav-item active">
+                          <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                              <%}%>
+                               
+                              </ul>
+                </div>
+              </nav>
+            </div>
